@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 и CSS3 сайт</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>itProger</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+            <a href="#" title="Приемущества" onclick="slowScroll('#overview')">Приемущества</a>
+            <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+            <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Программирование</h1>
+        <h3>как способ жизни!</h3>
+    </div>
+
+    <div id="main">
+        <div>
+            <h2>Наши услуги помогут вам!</h2>
+            <span>Большой выбор всего, что может вам пригодиться</span>
+        </div>
+        <div>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque lacus at eros vulputate accumsan. Integer vitae vestibulum ante. Sed pulvinar est vel neque semper imperdiet. Maecenas accumsan mattis est, a egestas odio volutpat vitae. Integer ut erat aliquet, tempus augue in, tincidunt neque. Donec vehicula, ante id condimentum volutpat, ipsum dui tristique risus, id hendrerit justo lectus at elit. Sed non facilisis ex, nec viverra justo. Aliquam dictum, nunc vel pulvinar aliquet, ante nisl sollicitudin lacus, a tempor neque nibh ac lorem. Integer aliquam dui eu odio iaculis, in vehicula est aliquet. Integer volutpat vitae quam nec mollis. Aenean sit amet lacus eu velit sagittis sollicitudin. Nunc commodo volutpat dolor, eget bibendum risus tristique non. Sed rutrum consectetur quam. Sed a aliquet lacus. Integer molestie, est facilisis scelerisque maximus, felis dui elementum odio, in mattis massa odio sed tortor. Nulla volutpat, sapien hendrerit congue consectetur, nisi erat efficitur orci, nec tempus lorem ex et urna.</span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Преимущества</h2>
+        <h3>с нами все проще</h3>
+
+        <div class="img">
+            <img src="https://bestprogrammer.ru/wp-content/uploads/2020/11/Swift.jpg" alt="">
+            <span>Изучение языка Ruby для начинающих</span>
+        </div>
+        <div class="img">
+            <img src="https://bestprogrammer.ru/wp-content/uploads/2020/11/Swift.jpg" alt="">
+            <span>Уроки PhotShop для начинающих</span>
+        </div>
+        <div class="img">
+            <img src="https://bestprogrammer.ru/wp-content/uploads/2020/11/Swift.jpg" alt="">
+            <span>Уроки Swift для начинющих</span>
+        </div>
+        <div class="img">
+            <img src="https://bestprogrammer.ru/wp-content/uploads/2020/11/Swift.jpg" alt="">
+            <span>Создание игры на Python 3 c Py Game</span>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+        })
+    </script>
+
+    <div id="contacts">
+        <center><h5>Обратная связь</h5></center>
+        <form id="form_input">
+            <label for="name">Имя<span>*</span></label><br>
+            <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+            <label for="email">Ваша почта<span>*</span></label><br>
+            <input type="email" placeholder="Введите email" name="email" id="email"><br>
+            <label for="massage">Сообщение<span>*</span></label><br>
+            <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+            <div id="mess_send" class="btn">Отправить</div>
+        </form>
+    </div>
+
+    <div id="faq">
+        <div>
+            <span class="title">Оплата</span><br>
+            <span class="heading">Как будет проходить оплата?</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <span class="heading">Как будет проходить оплата?</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <span class="heading">Как будет проходить оплата?</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+            <span class="title">Информация</span><br>
+            <span class="heading">Что входит в услуги сервиса?</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <span class="heading">Что входит в услуги сервиса?</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <span class="heading">Что входит в услуги сервиса?</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+            <span class="title">Гарантии</span><br>
+            <span class="heading">Какие есть гарантии?</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <span class="heading">Какие есть гарантии?</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <span class="heading">Какие есть гарантии?</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+    </div>
+</body>
+</html>
